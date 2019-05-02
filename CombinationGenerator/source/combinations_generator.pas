@@ -1,3 +1,6 @@
+{
+created by : boudiaf beddai
+}
 unit combinations_generator;
 
 interface
