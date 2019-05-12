@@ -64,12 +64,13 @@ begin
   mem_result.Clear;
   mem_result.Lines.BeginUpdate;
   for i := 0 to High(arr) do
-  begin
-    s := IntToStr(arr[i][0]);
-    for j := 1 to High(arr[i]) do
+  begin    
+    s := '';
+    for j := 0 to High(arr[i]) do
     begin
-      s := IntToStr(arr[i][j]) + ',' + s;
+      s := s + IntToStr(arr[i][j]) + ',';
     end;
+    delete(s, length(s), 1);
     mem_result.Lines.Add(s);
   end;
   mem_result.Lines.EndUpdate;
