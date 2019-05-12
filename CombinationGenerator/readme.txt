@@ -24,3 +24,5 @@ all possible combinations it's:
 it's very fast algorithm if you looking for the right way to do it. enjoy :D
 the algorithm speed so far its :3,921,225 "C(100,4)" combinations in 0.37 sec
 and "C(52,6)"=20,358,520 combinations in 1.58 sec
+------------------------------------------------------------------------------------
+this algorithm is gonna give you the index for every combination like :"1,2,3,4" this gonna be "1,1,1,1,0,0" so if you get only the values on the index of "1" from all values "1,2,3,4,5,6" then you should get "1,2,3,4"
