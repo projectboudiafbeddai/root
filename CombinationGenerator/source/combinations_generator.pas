@@ -99,8 +99,12 @@ begin
           str[rindex] := 0;
           rindex := k + howMany;
           // move to new position to start again
+          FillMemory(@(str[k]), (rindex-k+1) * SizeOf(byte), 1);
+          {
+          //or the old way
           for j := k to rindex do
             str[j] := 1;
+          }
           break;
         end;
       end;
