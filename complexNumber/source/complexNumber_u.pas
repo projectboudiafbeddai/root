@@ -86,13 +86,14 @@ begin
   result.img := a.img - b.img;
 end;
 
-// Divide a/b
+
 constructor Tz.create(arel, aimg: real);
 begin
   rel := arel;
   img := aimg;
 end;
 
+// Divide a/b
 class operator Tz.Divide(a, b: Tz): Tz;
 var
   dividVal: Tz;
