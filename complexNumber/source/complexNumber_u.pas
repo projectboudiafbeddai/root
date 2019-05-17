@@ -100,7 +100,7 @@ var
   dividVal: Tz;
 
 begin
-  // dividVal=b_bar*b;  this alawas give you real value (rel+0i);
+  // dividVal=b_bar*b;  this always give you real value (rel+0i);
   dividVal := b.conjugate * b;
   result := a * b.conjugate;
   result.rel := (result.rel / dividVal.rel);
