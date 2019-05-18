@@ -15,7 +15,7 @@ type
     function getRoots: TrootzType; override;
   end;
 
-  { #--------------------------------------TEquation_01-------------------------------------- }
+  { #--------------------------------------TEquation_02-------------------------------------- }
   TEquation_02 = class(TEquationSolverAbstract)
   private
     fa, fb, fc: Tz;
