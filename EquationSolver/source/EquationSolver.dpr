@@ -49,9 +49,9 @@ begin
   finally
     EquationTest.Free;
   end;
-  // ------------------------------test03 x²+3x-4=0 -----------------------------------------
+  // ------------------------------test03 xÂ²+3x-4=0 -----------------------------------------
   writeln('');
-  writeln('#3 Solve Equation x²+3x-4=0');
+  writeln('#3 Solve Equation xÂ²+3x-4=0');
   EquationTest := TEquation_02.create(1, 3, -4);
   try
     roots := EquationTest.getRoots();
@@ -62,9 +62,9 @@ begin
     EquationTest.Free;
   end;
 
-  // ------------------------------test04 x²+3x+4=0 -----------------------------------------
+  // ------------------------------test04 xÂ²+3x+4=0 -----------------------------------------
   writeln('');
-  writeln('#4 Solve Equation x²+3x+4=0');
+  writeln('#4 Solve Equation xÂ²+3x+4=0');
   EquationTest := TEquation_02.create(1, 3, 4);
   try
     roots := EquationTest.getRoots();
@@ -75,9 +75,9 @@ begin
     EquationTest.Free;
   end;
 
-  // ------------------------------test05 x²+1=0 -----------------------------------------
+  // ------------------------------test05 xÂ²+1=0 -----------------------------------------
   writeln('');
-  writeln('#5 Solve Equation x²+1=0');
+  writeln('#5 Solve Equation xÂ²+1=0');
   EquationTest := TEquation_02.create(1, 0, 1);
   try
     roots := EquationTest.getRoots();
@@ -88,9 +88,9 @@ begin
     EquationTest.Free;
   end;
 
-  // ------------------------------test06 (i)x²+(2-i)x+4=0  -----------------------------------------
+  // ------------------------------test06 (i)xÂ²+(2-i)x+4=0  -----------------------------------------
   writeln('');
-  writeln('#6 Solve Equation (i)x²+(2-i)x+4=0 ');
+  writeln('#6 Solve Equation (i)xÂ²+(2-i)x+4=0 ');
   EquationTest := TEquation_02.create(Tz.create(0, 1), Tz.create(2, -1), 4);
   try
     roots := EquationTest.getRoots();
@@ -100,10 +100,57 @@ begin
     EquationTest.Free;
   end;
 
-  // ------------------------------test07 0x²+2x+4=0  -----------------------------------------
+  // ------------------------------test07 0xÂ²+2x+4=0  -----------------------------------------
   writeln('');
-  writeln('#7 Solve Equation 0x²+2x+4=0 ');
+  writeln('#7 Solve Equation 0xÂ²+2x+4=0 ');
   EquationTest := TEquation_02.create(0, 2, 4);
+  try
+    roots := EquationTest.getRoots();
+    displayRoots(roots);
+    roots := nil; // free
+  finally
+    EquationTest.Free;
+  end;
+
+  // ------------------------------test08 x^3+xÂ²-x-1=0  -----------------------------------------
+  writeln('');
+  writeln('#8 Solve Equation x^3+xÂ²-x-1=0 ');
+  EquationTest := TEquation_03.create(1, 1, -1, -1);
+  try
+    roots := EquationTest.getRoots();
+    displayRoots(roots);
+    roots := nil; // free
+  finally
+    EquationTest.Free;
+  end;
+
+  // ------------------------------test09 x^3+2xÂ²-x-2=0  -----------------------------------------
+  writeln('');
+  writeln('#9 Solve Equation x^3+2xÂ²-x-2=0  ');
+  EquationTest := TEquation_03.create(1, 2, -1, -2);
+  try
+    roots := EquationTest.getRoots();
+    displayRoots(roots);
+    roots := nil; // free
+  finally
+    EquationTest.Free;
+  end;
+
+  // ------------------------------test10 x^3+3xÂ²+3x-1=0   -----------------------------------------
+  writeln('');
+  writeln('#10 Solve Equation x^3+3xÂ²+3x-1=0 ');
+  EquationTest := TEquation_03.create(1, 3, 3, -1);
+  try
+    roots := EquationTest.getRoots();
+    displayRoots(roots);
+    roots := nil; // free
+  finally
+    EquationTest.Free;
+  end;
+  // ------------------------------test11 0x^3+xÂ²-3x-4=0   -----------------------------------------
+  writeln('');
+  writeln('#11 Solve Equation 0x^3+xÂ²-3x-4=0 ');
+  EquationTest := TEquation_03.create(0, 1, -3, -4);
   try
     roots := EquationTest.getRoots();
     displayRoots(roots);
